@@ -10,7 +10,9 @@ import movies from './component/reducers/index';
 const store = createStore(movies);
 console.log('store',store);
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+store.dispatch({
+  type: 'ADD_MOVIES',
+  movies:[{name: 'Superman'}]
+});
+
+ReactDOM.render(<App />,document.getElementById('root'));
