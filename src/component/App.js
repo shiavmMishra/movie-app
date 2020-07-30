@@ -13,7 +13,7 @@ class App extends React.Component {
     });
     //make api call
     //dispatch action
-    this.props.store.dispatch(addMovies(data));
+    store.dispatch(addMovies(data));
     console.log('STATE' ,this.props.store.getState());
   }
 
